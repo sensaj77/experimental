@@ -49,8 +49,9 @@ var AnotherPageComponent = React.createClass({
 
     render: function() {
         return (
-            <Grid {...this.props}>
-                <Navbar inverse={ false } style={ {  } }>
+            <Grid {...this.props} id="grid-element">
+            
+                <Navbar inverse={ false } style={ { width:"1200px" } }>
                     <Nav>
                         <NavItem className="nav-bar-item" href="#" >
                             <span style={ {    color: 'black'} }>Front-End List</span>
@@ -70,8 +71,8 @@ var AnotherPageComponent = React.createClass({
                         <NavItem href="#" style={ {    backgroundColor: 'black'} }>
                             <span style={ {    color: 'white'} }>Shop</span>
                         </NavItem>
-                        <NavItem href="#" style={ {    marginLeft: '510px', backgroundColor: "blue"} }>
-                            <span>Why?</span>
+                        <NavItem href="#" style={ {    marginLeft: '525px', backgroundColor: "blue"} }>
+                            <span style={ {    color: 'red'} }>Why?</span>
                         </NavItem>
                     </Nav>
                 </Navbar>
@@ -86,7 +87,7 @@ var AnotherPageComponent = React.createClass({
                              md={ 6 }
                              sm={ 6 }
                              lg={ 6 }>
-                            <Jumbotron > <h2 ><span style={ {    fontFamily: 'Helvetica'} } >Awesome tutorials, inspiring articles and snippets.</span><br></br>
+                            <Jumbotron id="moon-ground" > <h2 ><span style={ {    fontFamily: 'Helvetica'} } >Awesome tutorials, inspiring articles and snippets.</span><br></br>
                             <span>Best lists to learn front-end everyday.</span></h2> 
                                 <p style={ {    marginLeft: '100px'} }></p>
                                 <Input style={{width:"500px"}} 

@@ -22,5 +22,16 @@
 	bottom: 12px;
 }
 .nav-bar-item {
-	background-color: grey;
+	background-color: maroon;
+}
+#moon-ground {
+	background-image: url("http://downloads.nuiverse.com/images%5C20120110_225235.jpg");
+}
+#grid-element {
+
+}
+body {
+	height:100%;
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/The_Sun_in_extreme_ultraviolet.jpg") no-repeat center center;
+	background-size: cover ;
 }
