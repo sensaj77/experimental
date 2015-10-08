@@ -1,3 +1,26 @@
-ListGroupItem {
-	color: orange;
+.list-group-item {
+	
+}
+.span-text {
+	position: relative;
+	top: 25px;
+}
+.company-image {
+	position: relative;
+	top: 25px;
+	width:35px;
+	 height:35px;
+}
+#udemy-image {
+	width:55px;
+	 height:55px;
+	 position: relative;
+	top: 25px;
+}
+.learning-button {
+	position: relative;
+	bottom: 12px;
+}
+.nav-bar-item {
+	background-color: grey;
 }
