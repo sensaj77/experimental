@@ -1,4 +1,3 @@
-
 'use strict';
 
 // require('../../src/assets/css/bootstrap.css');
@@ -50,28 +49,7 @@ var AnotherPageComponent = React.createClass({
     render: function() {
         return (
             <Grid {...this.props}>
-                <Navbar inverse={ false } style={ {  } }>
-                    <Nav>
-                        <NavItem href="#">
-                            <span>Toolkits</span>
-                        </NavItem>
-                        <NavItem href="#">
-                            <span>Frameworks</span>
-                        </NavItem>
-                        <NavItem href="#">
-                            <span>Resources</span>
-                        </NavItem>
-                        <NavItem href="#">
-                            <span>Learning</span>
-                        </NavItem>
-                        <NavItem href="#" style={ {    backgroundColor: 'black'} }>
-                            <span style={ {    color: 'white'} }>Shop</span>
-                        </NavItem>
-                        <NavItem href="#" style={ {    marginLeft: '550px'} }>
-                            <span>Why?</span>
-                        </NavItem>
-                    </Nav>
-                </Navbar>
+                
                 <Grid fluid={ true }>
                     <Row>
                         <Col xs={ 3 }
@@ -97,7 +75,7 @@ var AnotherPageComponent = React.createClass({
                                     <ListGroupItem href="#" style={ {    width: '800px'} }>
                                         <span>Treehouse</span>
                                         <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
+                                            <span style={ {    color: 'grey', position:"relative", bottom:"10px"} }>Start Learning</span>
                                         </Button>
                                     </ListGroupItem>
                                     <ListGroupItem href="#" style={ {    width: '800px'} }>
