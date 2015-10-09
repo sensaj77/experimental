@@ -38,7 +38,8 @@ var MainListGroup = require('./components/list-group.js');
 var Main = React.createClass({
     getDefaultProps: function() {
         return {
-            fluid: false
+            fluid: false,
+            randomText: "Jan Kochanowski z Czarnolasu"
         };
     },
 
@@ -62,6 +63,7 @@ var Main = React.createClass({
                                 <h4><span >Online screencast</span></h4>
                                 
                                 <MainListGroup />
+                                {this.props.randomText}
                             </Col>
                             <Col xs={ 3 }
                                  md={ 3 }

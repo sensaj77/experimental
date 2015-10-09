@@ -25,7 +25,6 @@ var JumbotronSubscribe = React.createClass({
 	                <p style={ {    marginLeft: '100px'} }></p>
 	                <Input style={{width:"500px"}} 
 	                	type="text"
-	                	label="Subscribe to get front-end news every week"
 	                    placeholder="Enter your email"
 	                    buttonAfter={ <Button bsStyle="default" style={ {    backgroundColor: 'black', marginRight:"600px"} }>
 	                <span style={ {    color: 'white'} }>Subscribe!</span>

@@ -1,3 +1,4 @@
+
 'use strict';
 
 // require('../../src/assets/css/bootstrap.css');
@@ -20,159 +21,49 @@ var Col = require('react-bootstrap').Col;
 
 var Button = require('react-bootstrap').Button;
 
-var SplitButton = require('react-bootstrap').SplitButton;
+var Router = require('react-router');
 
-var MenuItem = require('react-bootstrap').MenuItem;
+var Locations = Router.Locations;
 
-var Input = require('react-bootstrap').Input;
+var Location = Router.Location;
 
-var Navbar = require('react-bootstrap').Navbar;
+var NavigationBar = require('./components/navbar.js');
 
-var Nav = require('./ReactBootstrap').Nav;
+var JumbotronSubscribe = require('./components/jumbotron-subscribe.js');
 
-var NavItem = require('react-bootstrap').NavItem;
+var FeedbackList = require('./components/feedback-list.js');
 
-var ListGroup = require('react-bootstrap').ListGroup;
-
-var ListGroupItem = require('react-bootstrap').ListGroupItem;
-
-var Jumbotron = require('react-bootstrap').Jumbotron;
+var MainListGroup = require('./components/list-group.js');
 
 var Resources = React.createClass({
-
     getDefaultProps: function() {
         return {
-            fluid: false
+            fluid: false,
+            randomText: "Jan Kochanowski z Czarnolasu"
         };
     },
 
     render: function() {
         return (
-            <Grid {...this.props}>
-                
+            <Grid {...this.props} id="grid-element">
+            
+                <NavigationBar />
                 <Grid fluid={ true }>
                     <Row>
                         <Col xs={ 3 }
                              md={ 3 }
                              sm={ 3 }
                              lg={ 3 }></Col>
-                        <Col xs={ 6 }
+                        <Col style={{width:"1200px"}} 
+                            xs={ 6 }
                              md={ 6 }
                              sm={ 6 }
                              lg={ 6 }>
-                            <Jumbotron > <h2 ><span style={ {    fontFamily: 'Helvetica'} } >Awesome tutorials, inspiring articles and snippets.</span><br></br>
-                            <span>Best lists to learn front-end everyday.</span></h2> 
-                                <p style={ {    marginLeft: '100px'} }></p>
-                                <Input type="text"
-                                       label="Subscribe to get front-end news every week"
-                                       placeholder="Enter your email"
-                                       buttonAfter={ <Button bsStyle="default" style={ {    backgroundColor: 'black'} }>
-                                                         <span style={ {    color: 'white'} }>Subscribe!</span>
-                                                     </Button> }></Input>
-                                </Jumbotron>
+                            <JumbotronSubscribe />
                                 <h4><span >Online screencast</span></h4>
-                                <ListGroup>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey', position:"relative", bottom:"10px"} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <hr></hr>
-                                    <h4><span >Online podcast</span></h4>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <hr></hr>
-                                    <h4><span >Web Design Blogs</span></h4>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                    <ListGroupItem href="#" style={ {    width: '800px'} }>
-                                        <span>Treehouse</span>
-                                        <Button bsStyle="default" style={ {    marginLeft: '660px',    backgroundColor: 'red'} }>
-                                            <span style={ {    color: 'grey'} }>Start Learning</span>
-                                        </Button>
-                                    </ListGroupItem>
-                                </ListGroup>
+                                
+                                <MainListGroup />
+                                {this.props.randomText}
                             </Col>
                             <Col xs={ 3 }
                                  md={ 3 }
@@ -191,20 +82,7 @@ var Resources = React.createClass({
                              md={ 12 }
                              sm={ 12 }
                              lg={ 12 }>
-                            <SplitButton title="Feedback" dropup={ true }>
-                                <MenuItem eventKey="1">
-                                    <span>Dropdown link</span>
-                                </MenuItem>
-                                <MenuItem eventKey="2">
-                                    <span>Dropdown link</span>
-                                </MenuItem>
-                                <MenuItem divider={ true }>
-                                    <span>Dropdown link</span>
-                                </MenuItem>
-                                <MenuItem eventKey="3">
-                                    <span>Dropdown link</span>
-                                </MenuItem>
-                            </SplitButton>
+                            <FeedbackList />
                             <p>
                                 <span style={ {    marginLeft: '350px'} }>Proudly hosted by: © Mobilewebpro Total Dynamic Programming 2015</span>
                             </p>
@@ -215,4 +93,6 @@ var Resources = React.createClass({
     }
 });
 
-module.exports = Resources;
+//module.exports = Main;
+
+React.render(<Resources />, document.getElementById('example'));
