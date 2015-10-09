@@ -38,7 +38,7 @@ var ListGroupItem = require('react-bootstrap').ListGroupItem;
 
 var Jumbotron = require('react-bootstrap').Jumbotron;
 
-var AnotherPageComponent = React.createClass({
+var Resources = React.createClass({
 
     getDefaultProps: function() {
         return {
@@ -215,4 +215,4 @@ var AnotherPageComponent = React.createClass({
     }
 });
 
-React.render(<AnotherPageComponent />, document.getElementById('example'));
+module.exports = Resources;

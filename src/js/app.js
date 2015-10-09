@@ -1,18 +1,5 @@
-
-'use strict';
-
-// require('../../src/assets/css/bootstrap.css');
-
-// require('../../src/assets/css/font-awesome.min.css');
-
-// require('../../src/assets/js/bootstrap.js');
-
-// require('../../src/libs/bootstrap3-editable/css/bootstrap-editable.css');
-
-// require('../../src/libs/bootstrap3-editable/js/bootstrap-editable.js');
-
 var React = require('react');
-
+var Router = require('react-router');
 var Grid = require('react-bootstrap').Grid;
 
 var Row = require('react-bootstrap').Row;
@@ -20,6 +7,24 @@ var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
 
 var Button = require('react-bootstrap').Button;
+
+var SplitButton = require('react-bootstrap').SplitButton;
+
+var MenuItem = require('react-bootstrap').MenuItem;
+
+var Input = require('react-bootstrap').Input;
+
+var Navbar = require('react-bootstrap').Navbar;
+
+var Nav = require('./ReactBootstrap').Nav;
+
+var NavItem = require('react-bootstrap').NavItem;
+
+var ListGroup = require('react-bootstrap').ListGroup;
+
+var ListGroupItem = require('react-bootstrap').ListGroupItem;
+
+var Jumbotron = require('react-bootstrap').Jumbotron;
 
 var Router = require('react-router');
 
@@ -35,8 +40,8 @@ var FeedbackList = require('./components/feedback-list.js');
 
 var MainListGroup = require('./components/list-group.js');
 
-var Main = React.createClass({
-    getDefaultProps: function() {
+var App = React.createClass({
+	getDefaultProps: function() {
         return {
             fluid: false
         };
@@ -91,6 +96,4 @@ var Main = React.createClass({
     }
 });
 
-//module.exports = Main;
-
-React.render(<Main />, document.getElementById('example'));
+module.exports = App;
